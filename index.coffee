@@ -52,7 +52,7 @@ class Plugin extends EventEmitter
   setOptions: (options={}) =>
     @options = options
     if !ready
-      connectFirebase(@options.url) if @options.url?
+      @connectFirebase(@options.url) if @options.url?
 
 module.exports =
   messageSchema: MESSAGE_SCHEMA
